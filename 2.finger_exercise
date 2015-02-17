@@ -1,0 +1,42 @@
+#Finger exercise: Write a program that asks the user to input 10 integers, and
+#then prints the largest odd number that was entered. If no odd number was
+#entered, it should print a message to that effect.
+
+#asks for input and save it to variables
+
+first = int(input("Enter first number: "))
+second = int(input("Enter second number: "))
+third = int(input("Enter third number: "))
+fourth = int(input("Enter fourth number: "))
+fifth = int(input("Enter fifth number: "))
+sixth = int(input("Enter sixth number: "))
+seventh = int(input("Enter seventh number: "))
+eight = int(input("Enter eight number: "))
+nineth = int(input("Enter nineth number: "))
+tenth = int(input("Enter tenth number: "))
+
+
+numbers_odd = [] #we will add later all even numbers entered by user.
+numbers = [] #numbers is a list and we append all numbers to it.
+numbers.append(first)
+numbers.append(second)
+numbers.append(third)
+numbers.append(fourth)
+numbers.append(fifth)
+numbers.append(sixth)
+numbers.append(seventh)
+numbers.append(eight)
+numbers.append(nineth)
+numbers.append(tenth)
+
+
+for item in numbers:     #We add all even numbers to a new list
+    if item % 2 != 0:
+        pass #nothing happens if number is even.
+    else:
+        numbers_odd.append(item) #we append odd numbers to number_odd list.
+
+if(numbers_odd == []): #if the list is empty, no odd numbers were entered.
+    print('no odd numbers')
+else:
+    print(max(numbers_odd)) #function max returns the maximal value of list.
