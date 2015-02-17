@@ -1,0 +1,27 @@
+Finger exercise: 
+Write a program that examines three variables—x, y, and z— and prints the largest odd number among them.
+If none of them are odd, it should print a message to that effect.
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+z = int(input("Enter third number: "))
+
+
+numbers_odd = [] #we will add later all even numbers entered by user.
+numbers = [] #numbers is a list and we append x,y,z to it.
+numbers.append(x)
+numbers.append(y)
+numbers.append(z)
+
+for item in numbers:     #We add all even numbers to a new list
+    if item % 2 != 0:
+        pass #nothing happens if number is even.
+    else:
+        numbers_odd.append(item) #we append odd numbers to number_odd list.
+
+if(numbers_odd == []): #if the list is empty, no odd numbers were entered.
+    print('no odd numbers') 
+else:
+    print(max(numbers_odd)) #function max returns the maximal value of list.
+
+
