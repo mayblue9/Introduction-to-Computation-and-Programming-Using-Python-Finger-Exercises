@@ -1,5 +1,5 @@
 #Finger exercise: Write a program that asks the user to input 10 integers, and
-#then prints the largest odd number that was entered. If no odd number was
+#then prints the largest even number that was entered. If no even number was
 #entered, it should print a message to that effect.
 
 #asks for input and save it to variables
@@ -16,7 +16,7 @@ nineth = int(input("Enter nineth number: "))
 tenth = int(input("Enter tenth number: "))
 
 
-numbers_odd = [] #we will add later all even numbers entered by user.
+numbers_even = [] #we will add later all even numbers entered by user.
 numbers = [] #numbers is a list and we append all numbers to it.
 numbers.append(first)
 numbers.append(second)
@@ -32,11 +32,11 @@ numbers.append(tenth)
 
 for item in numbers:     #We add all even numbers to a new list
     if item % 2 != 0:
-        pass #nothing happens if number is even.
+        pass #nothing happens if number is odd.
     else:
-        numbers_odd.append(item) #we append odd numbers to number_odd list.
+        numbers_even.append(item) #we append odd numbers to number_even list.
 
-if(numbers_odd == []): #if the list is empty, no odd numbers were entered.
-    print('no odd numbers')
+if(numbers_even == []): #if the list is empty, no even numbers were entered.
+    print('no even numbers')
 else:
-    print(max(numbers_odd)) #function max returns the maximal value of list.
+    print(max(numbers_even)) #function max returns the maximal value of list.
