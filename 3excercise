@@ -1,0 +1,21 @@
+#Finger exercise: Write a program that asks the user to enter an integer and
+#prints two integers, root and pwr, such that 0 < pwr < 6 and root**pwr is equal
+#to the integer entered by the user. If no such pair of integers exists, it should
+#print a message to that effect.
+
+number = int(input('Please enter an integer: ')) #asks for the input
+
+root = 0 #variable which checks whether the number is in the range <0,number>
+power = 0 #powering number
+
+
+while(root <= number and (root-1)**power != number): #root has to be smaller & result can't be determined yet.
+    power = 0 #this always has to go (1,6) for every number POSSIBLY to be root.
+    while(power < 6 and root**power != number):        
+        power = power + 1
+    root = root + 1
+
+if((root-1)**power==number): #if we have found a good result, then prints it.
+    print(root-1, 'pwd by', power, 'equals to', number)
+else: #if we have not found a good result then prints unsucessful text.
+    print('Number has no root powered by number in range(0,6)')
