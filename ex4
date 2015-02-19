@@ -1,0 +1,22 @@
+numbers = input("Input decimal numbers separated by commas: ")
+
+list_of_numbers = numbers.split(',')
+
+
+total = 0
+
+for number in list_of_numbers:
+    total = total + float(number)
+
+
+print(total, 'is the sum of all number you have entered')
+
+
+#the type of slices is strings, so we have to confert the list of string
+#to list of floats
+
+floats = [float(i) for i in list_of_numbers]
+
+#And then we can use sum function of python standard library.
+
+print('the sum of all numbers is:', sum(floats))
